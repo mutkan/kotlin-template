@@ -2,16 +2,15 @@
 
 buildscript {
 
-    ext.kotlin_version = '1.2.41'
+    ext.kotlin_version = '1.2.71'
 
     repositories {
         mavenCentral()
-        maven { url 'https://maven.google.com' }
         jcenter()
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "dk.nodes.nstack:translation:1.0.4"
         classpath "com.github.gfx.ribbonizer:ribbonizer-plugin:2.1.0"
@@ -23,7 +22,7 @@ allprojects {
     repositories {
         mavenCentral()
         jcenter()
-        maven { url 'https://maven.google.com' }
+        google()
         mavenLocal()
     }
 }

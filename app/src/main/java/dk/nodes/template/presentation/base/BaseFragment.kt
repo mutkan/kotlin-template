@@ -21,5 +21,7 @@ abstract class BaseFragment : Fragment(), BaseView {
         injectDependencies()
     }
 
+
+
     protected abstract fun injectDependencies()
 }
