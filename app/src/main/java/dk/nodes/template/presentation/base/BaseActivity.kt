@@ -34,7 +34,8 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         Timber.e(viewError.throwable)
 
         val message = if (BuildConfig.DEBUG) {
-            viewError.throwable?.message ?: ""
+            val dialog = BaseErrorDialog(this)
+            dialog.show()
         } else {
             viewError.message
         }
