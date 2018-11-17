@@ -2,7 +2,7 @@ package dk.nodes.template.storage.base
 
 import android.content.Context
 import com.google.gson.Gson
-import dk.nodes.template.domain.repositories.RepositoryException
+import dk.nodes.template.domain.models.exceptions.RepositoryException
 import timber.log.Timber
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -22,7 +22,10 @@ abstract class GsonFileStorageRepository<T>(val context: Context, val gson: Gson
             outputStream.close()
         } catch (e: Exception) {
             e.printStackTrace()
-            throw(RepositoryException(-1, "file could not be written to internal storage"))
+            throw(RepositoryException(
+                    -1,
+                    "file could not be written to internal storage"
+            ))
         }
     }
 
@@ -47,7 +50,10 @@ abstract class GsonFileStorageRepository<T>(val context: Context, val gson: Gson
             return objects
         } catch (e: Exception) {
             Timber.e("Catching file not found")
-            throw(RepositoryException(-1, "File $filename could not be read from internal storage"))
+            throw(RepositoryException(
+                    -1,
+                    "File $filename could not be read from internal storage"
+            ))
         }
     }
 }

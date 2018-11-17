@@ -4,9 +4,8 @@ import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import dk.nodes.template.R
-import dk.nodes.template.domain.models.ViewError
+import dk.nodes.template.domain.models.exceptions.ViewError
 import kotlinx.android.synthetic.main.dialog_base_error.*
 import java.io.PrintWriter
 
@@ -30,7 +29,7 @@ class BaseErrorDialog(context: Context?) : Dialog(context) {
             val str = ""
             val pw = PrintWriter(str)
             it.throwable?.printStackTrace(pw)
-            if(str.isNullOrEmpty()) {
+            if (str.isNullOrEmpty()) {
                 errorException.visibility = View.GONE
             } else {
                 errorException.visibility = View.VISIBLE

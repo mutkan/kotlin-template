@@ -1,7 +1,10 @@
 package dk.nodes.template.util
 
+import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 // makes viewgroups iterable (you can for the each out of them!:)
 
@@ -44,4 +47,26 @@ fun View.setVisible(isVisible: Boolean, invisibleType: Int = View.GONE) {
     } else {
         invisibleType
     }
+}
+
+
+inline fun <reified T> Gson.fromJson(json: String?) = this.fromJson<T>(
+        json,
+        object : TypeToken<T>() {}.type
+)
+
+fun View.setDebouncedClickListener(duration: Long = 1000, listener: () -> Unit) {
+    setOnClickListener(object : View.OnClickListener {
+        private var lastClickMillis: Long = 0
+
+        override fun onClick(v: View) {
+            val now = SystemClock.elapsedRealtime()
+
+            if (now - lastClickMillis > duration) {
+                listener()
+            }
+
+            lastClickMillis = now
+        }
+    })
 }

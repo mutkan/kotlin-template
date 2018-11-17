@@ -1,4 +1,4 @@
-package dk.nodes.template.domain.models
+package dk.nodes.template.domain.models.exceptions
 
 data class ViewError(
         var title: String,

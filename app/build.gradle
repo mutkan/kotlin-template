@@ -94,7 +94,7 @@ repositories {
 }
 
 dependencies {
-    def kotlinx_coroutines_version = '0.19.1',
+    def kotlinx_coroutines_version = '1.0.1',
         dagger_version = "2.11",
         hockey_sdk_version = "5.1.0",
         timber_version = "4.7.1",

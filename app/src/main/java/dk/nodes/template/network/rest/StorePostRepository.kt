@@ -10,7 +10,7 @@ import com.nytimes.android.external.store3.base.impl.StoreBuilder
 import com.nytimes.android.external.store3.middleware.GsonParserFactory
 import dk.nodes.template.domain.models.Post
 import dk.nodes.template.domain.repositories.PostRepository
-import dk.nodes.template.domain.repositories.RepositoryException
+import dk.nodes.template.domain.models.exceptions.RepositoryException
 import okio.BufferedSource
 
 class StorePostRepository(val api: Api, val gson: Gson, val context: Context) : PostRepository {
@@ -27,7 +27,10 @@ class StorePostRepository(val api: Api, val gson: Gson, val context: Context) : 
         try {
             return if (cached) postStore.get(0).blockingGet() else postStore.fetch(0).blockingGet()
         } catch (e: Exception) {
-            throw(RepositoryException(-1, e.message ?: "Unknown"))
+            throw(RepositoryException(-1,
+                                                                                 e.message
+                                                                                         ?: "Unknown"
+            ))
         }
     }
 
