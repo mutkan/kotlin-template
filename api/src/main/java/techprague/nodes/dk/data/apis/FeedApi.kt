@@ -27,7 +27,7 @@ interface FeedApi {
      * @param includedAccountId Filter to only matches with this account_id participating (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/feed")
+    @GET("feed")
     fun feedGet(
         @Query("seq_num") seqNum: BigDecimal,
         @Query("game_mode") gameMode: BigDecimal,

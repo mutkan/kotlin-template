@@ -21,6 +21,6 @@ interface SchemaApi {
      * Get database schema
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/schema")
+    @GET("schema")
     fun schemaGet(): Call<Array<Any>>
 }

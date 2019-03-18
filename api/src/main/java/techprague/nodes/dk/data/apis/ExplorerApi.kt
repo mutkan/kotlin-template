@@ -23,6 +23,6 @@ interface ExplorerApi {
      * @param sql The PostgreSQL query as percent-encoded string. (optional)
      * @return Call&lt;Any&gt;
      */
-    @GET("/explorer")
+    @GET("explorer")
     fun explorerGet(@Query("sql") sql: String): Call<Any>
 }

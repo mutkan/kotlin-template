@@ -22,6 +22,6 @@ interface SearchApi {
      * @param q Search string (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/search")
+    @GET("search")
     fun searchGet(@retrofit2.http.Query("q") q: String): Call<Array<Any>>
 }

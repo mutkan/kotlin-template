@@ -24,7 +24,7 @@ interface RequestApi {
      * @param jobId The job ID to query. (required)
      * @return Call&lt;Any&gt;
      */
-    @GET("/request/{jobId}")
+    @GET("request/{jobId}")
     fun requestJobIdGet(@Path("jobId") jobId: String): Call<Any>
 
     /**

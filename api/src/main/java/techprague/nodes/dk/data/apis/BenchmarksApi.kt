@@ -24,6 +24,6 @@ interface BenchmarksApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Inline_response_200_20&gt;
      */
-    @GET("/benchmarks")
+    @GET("benchmarks")
     fun benchmarksGet(@Query("hero_id") heroId: String): Call<Inline_response_200_20>
 }

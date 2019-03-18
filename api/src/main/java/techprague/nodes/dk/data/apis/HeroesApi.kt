@@ -22,7 +22,7 @@ interface HeroesApi {
      * Get hero data
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/heroes")
+    @GET("heroes")
     fun heroesGet(): Call<Array<Any>>
 
     /**
@@ -31,7 +31,7 @@ interface HeroesApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/heroes/{hero_id}/durations")
+    @GET("heroes/{hero_id}/durations")
     fun heroesHeroIdDurationsGet(@Path("hero_id") heroId: Int): Call<Array<Any>>
 
     /**
@@ -40,7 +40,7 @@ interface HeroesApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/heroes/{hero_id}/matches")
+    @GET("heroes/{hero_id}/matches")
     fun heroesHeroIdMatchesGet(@Path("hero_id") heroId: Int): Call<Array<Any>>
 
     /**
@@ -49,7 +49,7 @@ interface HeroesApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/heroes/{hero_id}/matchups")
+    @GET("heroes/{hero_id}/matchups")
     fun heroesHeroIdMatchupsGet(@Path("hero_id") heroId: Int): Call<Array<Any>>
 
     /**
@@ -58,6 +58,6 @@ interface HeroesApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Array&lt;Array&lt;Any&gt;&gt;&gt;
      */
-    @GET("/heroes/{hero_id}/players")
+    @GET("heroes/{hero_id}/players")
     fun heroesHeroIdPlayersGet(@Path("hero_id") heroId: Int): Call<Array<Array<Any>>>
 }

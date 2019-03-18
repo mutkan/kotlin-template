@@ -21,6 +21,6 @@ interface LiveApi {
      * Get top currently ongoing live games
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/live")
+    @GET("live")
     fun liveGet(): Call<Array<Any>>
 }

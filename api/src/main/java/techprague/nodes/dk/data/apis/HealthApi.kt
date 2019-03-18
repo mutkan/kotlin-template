@@ -21,6 +21,6 @@ interface HealthApi {
      * Get service health data
      * @return Call&lt;Any&gt;
      */
-    @GET("/health")
+    @GET("health")
     fun healthGet(): Call<Any>
 }

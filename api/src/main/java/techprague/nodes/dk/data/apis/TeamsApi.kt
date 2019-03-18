@@ -26,7 +26,7 @@ interface TeamsApi {
      * Get team data
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/teams")
+    @GET("teams")
     fun teamsGet(): Call<Array<Any>>
 
     /**
@@ -35,7 +35,7 @@ interface TeamsApi {
      * @param teamId Team ID (required)
      * @return Call&lt;Inline_response_200_26&gt;
      */
-    @GET("/teams/{team_id}")
+    @GET("teams/{team_id}")
     fun teamsTeamIdGet(@Path("team_id") teamId: Int): Call<Inline_response_200_26>
 
     /**
@@ -44,7 +44,7 @@ interface TeamsApi {
      * @param teamId Team ID (required)
      * @return Call&lt;Inline_response_200_28&gt;
      */
-    @GET("/teams/{team_id}/heroes")
+    @GET("teams/{team_id}/heroes")
     fun teamsTeamIdHeroesGet(@Path("team_id") teamId: Int): Call<Inline_response_200_28>
 
     /**
@@ -53,7 +53,7 @@ interface TeamsApi {
      * @param teamId Team ID (required)
      * @return Call&lt;Inline_response_200_14&gt;
      */
-    @GET("/teams/{team_id}/matches")
+    @GET("teams/{team_id}/matches")
     fun teamsTeamIdMatchesGet(@Path("team_id") teamId: Int): Call<Inline_response_200_14>
 
     /**
@@ -62,6 +62,6 @@ interface TeamsApi {
      * @param teamId Team ID (required)
      * @return Call&lt;Inline_response_200_27&gt;
      */
-    @GET("/teams/{team_id}/players")
+    @GET("teams/{team_id}/players")
     fun teamsTeamIdPlayersGet(@Path("team_id") teamId: Int): Call<Inline_response_200_27>
 }

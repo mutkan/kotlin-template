@@ -23,6 +23,6 @@ interface ReplaysApi {
      * @param matchId Match IDs (array) (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/replays")
+    @GET("replays")
     fun replaysGet(@Query("match_id") matchId: Int): Call<Array<Any>>
 }

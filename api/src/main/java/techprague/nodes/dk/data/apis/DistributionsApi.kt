@@ -22,6 +22,6 @@ interface DistributionsApi {
      * Distributions of MMR data by bracket and country
      * @return Call&lt;Inline_response_200_17&gt;
      */
-    @GET("/distributions")
+    @GET("distributions")
     fun distributionsGet(): Call<Inline_response_200_17>
 }

@@ -4,6 +4,7 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import techprague.nodes.dk.data.apis.BenchmarksApi
@@ -30,6 +31,7 @@ import techprague.nodes.dk.data.apis.SchemaApi
 import techprague.nodes.dk.data.apis.SearchApi
 import techprague.nodes.dk.data.apis.StatusApi
 import techprague.nodes.dk.data.apis.TeamsApi
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -45,12 +47,18 @@ class RestModule {
             .build()
     }
 
-
-
     @Provides
-    fun provideOkhttpClient(): OkHttpClient {
+    fun provideOkhttpClient(@Named("API_KEY") apiKey: String): OkHttpClient {
         return OkHttpClient.Builder()
-
+            .addInterceptor { chain ->
+                var request = chain.request()
+                val url = request.url().newBuilder().addQueryParameter("api_key", apiKey).build()
+                request = request.newBuilder().url(url).build()
+                chain.proceed(request)
+            }
+            .addInterceptor(HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
+            })
             .build()
     }
 

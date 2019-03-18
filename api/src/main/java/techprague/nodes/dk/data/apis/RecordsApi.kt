@@ -23,6 +23,6 @@ interface RecordsApi {
      * @param field Field name to query (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/records/{field}")
+    @GET("records/{field}")
     fun recordsFieldGet(@Path("field") field: String): Call<Array<Any>>
 }

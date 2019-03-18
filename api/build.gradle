@@ -9,4 +9,7 @@ dependencies {
     kapt Libs.Dagger.compiler
     implementation Libs.Retrofit.retrofit
     implementation Libs.Retrofit.moshiConverter
+    implementation Libs.OkHttp.loggingInterceptor
+    testImplementation Libs.junit
+
 }

@@ -24,7 +24,7 @@ interface PublicMatchesApi {
      * @param lessThanMatchId Get matches with a match ID lower than this value (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/publicMatches")
+    @GET("publicMatches")
     fun publicMatchesGet(
         @retrofit2.http.Query("mmr_ascending") mmrAscending: Int,
         @retrofit2.http.Query("mmr_descending") mmrDescending: Int,

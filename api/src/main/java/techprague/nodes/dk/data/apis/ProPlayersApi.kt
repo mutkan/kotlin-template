@@ -21,6 +21,6 @@ interface ProPlayersApi {
      * Get list of pro players
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/proPlayers")
+    @GET("proPlayers")
     fun proPlayersGet(): Call<Array<Any>>
 }

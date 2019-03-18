@@ -23,6 +23,6 @@ interface RankingsApi {
      * @param heroId Hero ID (required)
      * @return Call&lt;Inline_response_200_19&gt;
      */
-    @GET("/rankings")
+    @GET("rankings")
     fun rankingsGet(@retrofit2.http.Query("hero_id") heroId: String): Call<Inline_response_200_19>
 }

@@ -21,6 +21,6 @@ interface LeaguesApi {
      * Get league data
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/leagues")
+    @GET("leagues")
     fun leaguesGet(): Call<Array<Any>>
 }

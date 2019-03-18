@@ -22,6 +22,6 @@ interface MetadataApi {
      * Site metadata
      * @return Call&lt;Inline_response_200_16&gt;
      */
-    @GET("/metadata")
+    @GET("metadata")
     fun metadataGet(): Call<Inline_response_200_16>
 }

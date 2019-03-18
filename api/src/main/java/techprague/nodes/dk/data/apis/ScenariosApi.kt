@@ -24,7 +24,7 @@ interface ScenariosApi {
      * @param heroId Hero ID (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/scenarios/itemTimings")
+    @GET("scenarios/itemTimings")
     fun scenariosItemTimingsGet(
         @Query("item") item: String,
         @Query("hero_id") heroId: Int
@@ -37,7 +37,7 @@ interface ScenariosApi {
      * @param heroId Hero ID (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/scenarios/laneRoles")
+    @GET("scenarios/laneRoles")
     fun scenariosLaneRolesGet(
         @Query("lane_role") laneRole: String,
         @Query("hero_id") heroId: Int
@@ -49,6 +49,6 @@ interface ScenariosApi {
      * @param scenario pos_chat_1min,neg_chat_1min,courier_kill,first_blood (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/scenarios/misc")
+    @GET("scenarios/misc")
     fun scenariosMiscGet(@Query("scenario") scenario: String): Call<Array<Any>>
 }

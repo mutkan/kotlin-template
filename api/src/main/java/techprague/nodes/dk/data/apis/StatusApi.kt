@@ -21,7 +21,7 @@ interface StatusApi {
      * Get API request metrics
      * @return Call&lt;Any&gt;
      */
-    @GET("/admin/apiMetrics")
+    @GET("admin/apiMetrics")
     fun adminApiMetricsGet(): Call<Any>
 
     /**
@@ -29,6 +29,6 @@ interface StatusApi {
      * Get current service statistics
      * @return Call&lt;Any&gt;
      */
-    @GET("/status")
+    @GET("status")
     fun statusGet(): Call<Any>
 }

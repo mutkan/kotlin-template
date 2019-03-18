@@ -21,6 +21,6 @@ interface HeroStatsApi {
      * Get stats about hero performance in recent matches
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/heroStats")
+    @GET("heroStats")
     fun heroStatsGet(): Call<Array<Any>>
 }

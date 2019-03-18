@@ -33,9 +33,12 @@ android {
                 appId : translation.appId,
                 apiKey: translation.apiKey
         ]
+
+        buildConfigField "String", "API_KEY", api_key
     }
 
     buildTypes {
+
         debug {
             // uncomment the following line if you add a flavorbased signingConfig for debug builds
             //signingConfig null

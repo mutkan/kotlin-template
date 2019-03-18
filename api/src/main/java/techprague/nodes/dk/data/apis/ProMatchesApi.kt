@@ -22,6 +22,6 @@ interface ProMatchesApi {
      * @param lessThanMatchId Get matches with a match ID lower than this value (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/proMatches")
+    @GET("proMatches")
     fun proMatchesGet(@retrofit2.http.Query("less_than_match_id") lessThanMatchId: Int): Call<Array<Any>>
 }

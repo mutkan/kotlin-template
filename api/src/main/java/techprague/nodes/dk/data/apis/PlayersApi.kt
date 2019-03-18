@@ -48,7 +48,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Inline_response_200_9&gt;
      */
-    @GET("/players/{account_id}/counts")
+    @GET("players/{account_id}/counts")
     fun playersAccountIdCountsGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -77,7 +77,7 @@ interface PlayersApi {
      * @param accountId Steam32 account ID (required)
      * @return Call&lt;Inline_response_200_1&gt;
      */
-    @GET("/players/{account_id}")
+    @GET("players/{account_id}")
     fun playersAccountIdGet(@Path("account_id") accountId: Int): Call<AccountById>
 
     /**
@@ -104,7 +104,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/heroes")
+    @GET("players/{account_id}/heroes")
     fun playersAccountIdHeroesGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -152,7 +152,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/histograms/{field}")
+    @GET("players/{account_id}/histograms/{field}")
     fun playersAccountIdHistogramsFieldGet(
         @Path("account_id") accountId: Int,
         @Path("field") field: String,
@@ -201,7 +201,7 @@ interface PlayersApi {
      * @param project Fields to project (array) (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/matches")
+    @GET("players/{account_id}/matches")
     fun playersAccountIdMatchesGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -249,7 +249,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/peers")
+    @GET("players/{account_id}/peers")
     fun playersAccountIdPeersGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -296,7 +296,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/pros")
+    @GET("players/{account_id}/pros")
     fun playersAccountIdProsGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -325,7 +325,7 @@ interface PlayersApi {
      * @param accountId Steam32 account ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/rankings")
+    @GET("players/{account_id}/rankings")
     fun playersAccountIdRankingsGet(@Path("account_id") accountId: Int): Call<Array<Any>>
 
     /**
@@ -334,7 +334,7 @@ interface PlayersApi {
      * @param accountId Steam32 account ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/ratings")
+    @GET("players/{account_id}/ratings")
     fun playersAccountIdRatingsGet(@Path("account_id") accountId: Int): Call<Array<Any>>
 
     /**
@@ -343,7 +343,7 @@ interface PlayersApi {
      * @param accountId Steam32 account ID (required)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/recentMatches")
+    @GET("players/{account_id}/recentMatches")
     fun playersAccountIdRecentMatchesGet(@Path("account_id") accountId: Int): Call<Array<Any>>
 
     /**
@@ -379,7 +379,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Array&lt;Any&gt;&gt;
      */
-    @GET("/players/{account_id}/totals")
+    @GET("players/{account_id}/totals")
     fun playersAccountIdTotalsGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -426,7 +426,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Inline_response_200_10&gt;
      */
-    @GET("/players/{account_id}/wardmap")
+    @GET("players/{account_id}/wardmap")
     fun playersAccountIdWardmapGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -473,7 +473,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Inline_response_200_2&gt;
      */
-    @GET("/players/{account_id}/wl")
+    @GET("players/{account_id}/wl")
     fun playersAccountIdWlGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,
@@ -520,7 +520,7 @@ interface PlayersApi {
      * @param sort The field to return matches sorted by in descending order (optional)
      * @return Call&lt;Inline_response_200_11&gt;
      */
-    @GET("/players/{account_id}/wordcloud")
+    @GET("players/{account_id}/wordcloud")
     fun playersAccountIdWordcloudGet(
         @Path("account_id") accountId: Int,
         @Query("limit") limit: Int,

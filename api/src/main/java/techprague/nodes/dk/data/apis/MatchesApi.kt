@@ -24,6 +24,6 @@ interface MatchesApi {
      * @param matchId  (required)
      * @return Call&lt;Inline_response_200&gt;
      */
-    @GET("/matches/{match_id}")
+    @GET("matches/{match_id}")
     fun matchesMatchIdGet(@Path("match_id") matchId: Long): Call<MatchById>
 }
