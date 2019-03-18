@@ -8,6 +8,7 @@ dependencies {
     implementation Libs.Dagger.dagger
     kapt Libs.Dagger.compiler
     implementation Libs.Retrofit.retrofit
+    implementation Libs.moshi
     implementation Libs.Retrofit.moshiConverter
     implementation Libs.OkHttp.loggingInterceptor
     testImplementation Libs.junit
