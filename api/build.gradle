@@ -1,0 +1,9 @@
+import dk.template.buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Libs.Kotlin.stdlib
+    implementation Libs.Dagger.dagger
+    implementation Libs.Retrofit.retrofit
+}
