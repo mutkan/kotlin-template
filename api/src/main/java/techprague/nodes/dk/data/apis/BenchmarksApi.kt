@@ -13,6 +13,8 @@ package techprague.nodes.dk.data.apis
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Query
+import techprague.nodes.dk.data.models.Inline_response_200_20
 
 interface BenchmarksApi {
 
@@ -23,5 +25,5 @@ interface BenchmarksApi {
      * @return Call&lt;Inline_response_200_20&gt;
      */
     @GET("/benchmarks")
-    fun benchmarksGet(@retrofit2.http.Query("hero_id") heroId: String): Call<Inline_response_200_20>
+    fun benchmarksGet(@Query("hero_id") heroId: String): Call<Inline_response_200_20>
 }

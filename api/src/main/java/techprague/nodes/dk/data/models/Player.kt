@@ -1,12 +1,12 @@
 package techprague.nodes.dk.data.models
 
 data class Player(
-    val ability_targets: AbilityTargets,
+    val ability_targets: Map<String, Int>,
     val ability_uses: Map<String, Int>,
     val buybacks: Int,
     val damage: Int,
     val deaths: Int,
-    val deaths_pos: DeathsPos,
+    val deaths_pos: Map<String, Int>,
     val gold_delta: Int,
     val healing: Int,
     val item_uses: ItemUses,

@@ -6,7 +6,6 @@ data class MatchById(
     val barracks_status_radiant: Int,
     val chat: List<Chat>,
     val cluster: Int,
-    val cosmetics: Cosmetics,
     val dire_score: Int,
     val dire_team_id: Any?,
     val draft_timings: List<DraftTiming>,
