@@ -1,3 +1,6 @@
+import dk.template.buildsrc.Libs
+
+
 apply plugin: 'com.android.application'
 apply plugin: 'dk.nstack.translation.plugin'
 apply plugin: 'kotlin-android'
@@ -95,12 +98,13 @@ repositories {
 }
 
 dependencies {
-    
+
     fileTree(dir: "libs", include: ["*.jar"])
     androidTestImplementation("androidx.test.espresso:espresso-core:${versions.espresso_core}", {
         exclude group: "com.android.support", module: "support-annotations"
     })
-    implementation project (':domain')
+    implementation project(':domain')
+    implementation project(':base')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "org.jetbrains.kotlin:kotlin-reflect:${versions.kotlin}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.kotlinx_coroutines}"
@@ -112,6 +116,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraint_layout}"
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation Libs.moshi
 
     implementation "com.google.dagger:dagger-android:${versions.dagger}"
     implementation "com.google.dagger:dagger-android-support:${versions.dagger}"
@@ -159,4 +164,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:${versions.lifecycle}"
     kapt "androidx.lifecycle:lifecycle-compiler:${versions.lifecycle}"
     implementation "androidx.core:core-ktx:${versions.ktx}"
+    compile project(path: ':api')
 }

@@ -68,6 +68,13 @@ object Libs {
             const val runtime = "androidx.lifecycle:lifecycle-runtime:$version"
             const val compiler = "androidx.lifecycle:lifecycle-compiler:$version"
         }
+
+        object Paging {
+            private const val version = "2.1.0"
+            val common = "androidx.paging:paging-common:$version"
+            val runtime = "androidx.paging:paging-runtime:$version"
+            val rxjava2 = "androidx.paging:paging-rxjava2:$version"
+        }
     }
 
     object RxJava {

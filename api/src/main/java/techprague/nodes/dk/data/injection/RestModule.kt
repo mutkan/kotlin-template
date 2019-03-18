@@ -45,9 +45,13 @@ class RestModule {
             .build()
     }
 
+
+
     @Provides
     fun provideOkhttpClient(): OkHttpClient {
-        return OkHttpClient()
+        return OkHttpClient.Builder()
+
+            .build()
     }
 
     @Provides

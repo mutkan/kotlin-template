@@ -13,6 +13,7 @@ package techprague.nodes.dk.data.apis
 
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
 import techprague.nodes.dk.data.models.body.MatchById
 
 interface MatchesApi {
@@ -24,5 +25,5 @@ interface MatchesApi {
      * @return Call&lt;Inline_response_200&gt;
      */
     @GET("/matches/{match_id}")
-    fun matchesMatchIdGet(@retrofit2.http.Path("match_id") matchId: Int): Call<MatchById>
+    fun matchesMatchIdGet(@Path("match_id") matchId: Long): Call<MatchById>
 }

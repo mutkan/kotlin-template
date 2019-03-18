@@ -1,0 +1,11 @@
+import dk.template.buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+dependencies {
+    compile Libs.Kotlin.stdlib
+
+    compile Libs.Coroutines.core
+    compile Libs.RxJava.rxJava
+
+}
