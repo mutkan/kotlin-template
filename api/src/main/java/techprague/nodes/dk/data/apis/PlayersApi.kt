@@ -16,11 +16,11 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
-import techprague.nodes.dk.data.models.Inline_response_200_1
 import techprague.nodes.dk.data.models.Inline_response_200_10
 import techprague.nodes.dk.data.models.Inline_response_200_11
 import techprague.nodes.dk.data.models.Inline_response_200_2
 import techprague.nodes.dk.data.models.Inline_response_200_9
+import techprague.nodes.dk.data.models.body.AccountById
 
 interface PlayersApi {
 
@@ -78,7 +78,7 @@ interface PlayersApi {
      * @return Call&lt;Inline_response_200_1&gt;
      */
     @GET("/players/{account_id}")
-    fun playersAccountIdGet(@Path("account_id") accountId: Int): Call<Inline_response_200_1>
+    fun playersAccountIdGet(@Path("account_id") accountId: Int): Call<AccountById>
 
     /**
      * GET /players/{account_id}/heroes

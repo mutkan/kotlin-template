@@ -6,4 +6,5 @@ dependencies {
     implementation Libs.Kotlin.stdlib
     implementation Libs.Dagger.dagger
     implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.moshiConverter
 }

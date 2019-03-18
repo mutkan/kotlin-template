@@ -22,6 +22,7 @@ object Libs {
     const val gson = "com.google.code.gson:gson:2.8.5"
     const val multidex = "com.android.support:multidex:1.0.3"
     const val injex = "javax.inject:javax.inject:1"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:1.8.0"
 
     object Nodes {
 
@@ -92,6 +93,7 @@ object Libs {
         const val retrofit = "com.squareup.retrofit2:retrofit:$version"
         const val scalarsConverter = "com.squareup.retrofit2:converter-scalars:$version"
         const val gsonConverter = "com.squareup.retrofit2:converter-gson:$version"
+        const val moshiConverter = "com.squareup.retrofit2:converter-moshi:$version"
     }
 
     object OkHttp {
